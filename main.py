@@ -7,6 +7,7 @@ from database.managers.base import table_manager
 
 def main():
     table_manager.create_tables()
+    print(table_manager.manage('SELECT * FROM categories;', fetchall=True))
     bot.infinity_polling()
 
 
